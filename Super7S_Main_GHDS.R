@@ -251,11 +251,7 @@ if(exists("Super7S_Data")) {
     cat("❌ 弱信号模式，建议观望\n")
   }
   
-  # 可视化当前模式
-  visualize_patterns(Super7S_Data)
-} else {
-  cat("请先加载Super7S_Data数据\n")
-}
+
 
 # J：模式可视化函数
 visualize_patterns <- function(Super7S_Data, positions = 1:3) {
@@ -276,6 +272,12 @@ visualize_patterns <- function(Super7S_Data, positions = 1:3) {
     grid()
   }
   par(mfrow = c(1, 1))
+}
+
+# 可视化当前模式
+visualize_patterns(Super7S_Data)
+} else {
+  cat("请先加载Super7S_Data数据\n")
 }
 
 # K：策略性能回测函数（简化版）
