@@ -233,13 +233,13 @@ if(exists("Super7S_Data")) {
   strength_analysis <- analyze_pattern_strength(Super7S_Data)
   
   # 输出结果
-  cat("====== 七星彩分形预测结果 ======\n")
+  cat("========== 七星彩分形预测结果 ==========\n")
   print(prediction_result)
   
-  cat("\n======= 模式强度分析 =======\n")
+  cat("\n=========== 模式强度分析 ===========\n")
   print(strength_analysis)
   
-  cat("\n======== 推荐操作策略 ========\n")
+  cat("\n============ 推荐操作策略 ============\n")
   strong_signals <- sum(strength_analysis$Signal_Quality == "强")
   if(strong_signals >= 4) {
     cat("✅ 强信号模式检测到，建议操作\n")
@@ -325,7 +325,7 @@ backtest_strategy <- function(Super7S_Data, window_size = 8, test_periods = 20) 
 # L：运行回测（可选）
 if(exists("Super7S_Data") && nrow(Super7S_Data) > 50) {
   backtest_results <- backtest_strategy(Super7S_Data)
-  cat("\n====== 回测结果 ======\n")
+  cat("\n========= 回测结果 =========\n")
   print(backtest_results)
   cat("平均命中率:", mean(backtest_results$Hit_Rate, na.rm = TRUE), "\n")
 }
