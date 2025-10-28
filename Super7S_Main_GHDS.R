@@ -17,16 +17,16 @@ library(zoo)
 library(GH.AN.LIST)
 
 # B：数据准备
-Super7S_Data <- GH_LIST(1,2000,6)
+Super7S_Data <- GH_LIST(1,4000,6)
 # str(Super7S_Data) # 数据集的基本信息
 # head(Super7S_Data)  # 前几行数据
 # sum(is.na(Super7S_Data)) # 检查缺失值
-
+# write.csv(Super7S_Data, file = "data.csv", row.names = FALSE)
 # C：分形预测主函数
 fractal_super7_prediction <- function(Super7S_Data, 
-                                      window_size = 10, 
-                                      top_matches = 5,
-                                      prediction_length = 1) {
+                                      window_size = 12, 
+                                      top_matches = 8,
+                                      prediction_length = 2) {
   
   # 数据预处理
   data_preprocessed <- preprocess_data(Super7S_Data)
