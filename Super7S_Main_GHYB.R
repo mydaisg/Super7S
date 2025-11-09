@@ -1,7 +1,7 @@
 # @author: my@daisg.com
 # @date: 2025-10-24
 # @version: 0.1
-# Copyright (c) 2025 daisg
+# Copyright (c) 2025 DaiSG(David Tai)
 # SPDX-License-Identifier: GPL-3
 # @brief/ Description
 ## Super 7 star lottery with AI(mlr3)
